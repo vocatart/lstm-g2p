@@ -1,0 +1,29 @@
+model:
+  max_len: 32
+
+encoder:
+  d_model: 64
+  d_hidden: 128
+  num_layers: 2
+  dropout: 0.1
+
+decoder:
+  d_model: 64
+  d_hidden: 128
+  num_layers: 2
+  dropout: 0.1
+
+training:
+  run_name: 'cmudict-english'
+  num_epochs: 10
+  batch_size: 256
+  learning_rate: 0.005
+  minimum_learning_rate: 0.00005
+  gamma: 0.8
+  grad_clip: 2.0
+  validation_divide_by: 10
+  dl_workers: 0
+  seed: null
+
+data:
+  dict_path: 'g2p/data/dict.tsv'
