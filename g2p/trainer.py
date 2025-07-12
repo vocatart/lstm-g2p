@@ -69,7 +69,7 @@ class Trainer():
         train_set_size = len(dataset) - valid_set_size
 
         # create random generator for reproducibility
-        generator = torch.Generator(device=device)
+        generator = torch.Generator(device=torch.device('cpu'))
         if seed is not None:
             generator.manual_seed(seed)
         
