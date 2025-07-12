@@ -268,7 +268,7 @@ class LstmG2P(nn.Module):
     
     def predict_str(self, word: str) -> list[str]:
         self.grapheme_indexes = {grapheme: i for i, grapheme in enumerate(self.encoder.graphemes)}
-        graphemes = torch.tensor([[self.grapheme_indexes.get(grapheme, UNK_IDX) for grapheme in word]])
+        graphemes = torch.tensor([[self.grapheme_indexes.get(grapheme.lower(), UNK_IDX) for grapheme in word]])
 
         phonemes = self.predict(graphemes)
         phonemes = phonemes.cpu().int().numpy().tolist()
