@@ -15,7 +15,7 @@ decoder:
 
 training:
   run_name: 'cmudict-english'
-  num_epochs: 10
+  num_epochs: 100
   batch_size: 256
   learning_rate: 0.005
   minimum_learning_rate: 0.00005
