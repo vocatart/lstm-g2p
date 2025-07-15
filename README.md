@@ -1,4 +1,4 @@
-# lstm_g2p
+# lstm-g2p
 
 reimplementation of [OpenUtau's LSTM G2P](https://github.com/stakira/OpenUtau/tree/master/py). mostly as a neural network, deployment, and pipeline exercise.
 
